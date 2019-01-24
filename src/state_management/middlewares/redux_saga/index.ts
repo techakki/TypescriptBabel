@@ -41,7 +41,7 @@ function* onSignUpSuccess(action: SignUpSuccessAction): {} {
 }
 
 function* watchActions(): {} {
-  yield takeEvery(SIGN_UP, signUp);
+  yield takeEvery(SIGN_UP, handleSignUp);
   yield takeEvery(SIGN_UP_SUCCESS, onSignUpSuccess);
 }
 

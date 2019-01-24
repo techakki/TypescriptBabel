@@ -2,7 +2,7 @@
   "name": "sharedcode",
   "version": "1.0.0",
   "description": "code sharing between web and mobile app written in typescript.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
