@@ -7,8 +7,9 @@
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
     "prebuild": "rimraf dist",
-    "build:types": "rimraf index.d.ts && tsc --emitDeclarationOnly",
-    "build": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline"
+    "build": "npm run build:types && npm run build:js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline"
   },
   "license": "ISC",
   "devDependencies": {
