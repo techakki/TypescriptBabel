@@ -8,22 +8,18 @@
     "type-check:watch": "npm run type-check -- --watch",
     "prebuild": "rimraf dist",
     "build:types": "rimraf index.d.ts && tsc --emitDeclarationOnly",
-    "build": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline",
-    "preinstall": "npm run build"
+    "build": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline"
   },
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.2.0",
     "@babel/core": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
     "@babel/preset-env": "^7.2.0",
     "@babel/preset-typescript": "^7.1.0",
     "rimraf": "^2.6.3",
     "typescript": "^3.2.2"
-  },
-  "peerDependencies": {
-    "@babel/cli": "^7.2.0",
-    "@babel/preset-env": "^7.2.0",
-    "@babel/plugin-proposal-class-properties": "^7.2.1",
-    "@babel/plugin-proposal-object-rest-spread": "^7.2.0"
   },
   "dependencies": {
     "redux-saga": "^1.0.0"
