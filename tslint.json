@@ -1,0 +1,9 @@
+{
+	"extends": ["tslint-clean-code","tslint:recommended"],
+	"rulesDirectory": [
+    	"node_modules/tslint-clean-code/dist/src/"
+	],
+	"rules": {
+		"no-commented-out-code": true
+	}
+}

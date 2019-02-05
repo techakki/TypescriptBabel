@@ -9,7 +9,9 @@
     "prebuild": "rimraf dist",
     "build": "npm run build:types && npm run build:js",
     "build:types": "tsc --emitDeclarationOnly",
-    "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline"
+    "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline",
+    "lint": "tslint --project tsconfig.json",
+    "preinstall": "npm run build"
   },
   "license": "ISC",
   "devDependencies": {
@@ -20,9 +22,11 @@
     "@babel/preset-env": "^7.2.0",
     "@babel/preset-typescript": "^7.1.0",
     "rimraf": "^2.6.3",
+    "tslint": "^5.12.1",
     "typescript": "^3.2.2"
   },
   "dependencies": {
-    "redux-saga": "^1.0.0"
+    "redux-saga": "^1.0.0",
+    "tslint-clean-code": "^0.2.9"
   }
 }
